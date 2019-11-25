@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+<body>
+    <script type="text/javascript" src="necromancer-data.js" type="module"></script>
+    <script type="text/javascript" src="activation-data.js" type="module"></script>
+    <script type="text/javascript" src="double-spawn-data.js" type="module"></script>
+    <script type="text/javascript" src="szi-data.js" type="module"></script>
+    <script type="text/javascript" src="app.js" type="module"></script>
+  <button onclick="pickUpCard()">Pick-up</button>
+
+  <img src="" height="700" id="cardImg"/>
+  
+  <script type="text/javascript">
+    let card;
+    function pickUpCard() {
+        card = getRandomCard();
+        const imgPath = 'images/' + card.number + '.jpg';
+        document.getElementById('cardImg').src = imgPath;
+    }
+  </script>
+</body>
+</html>
