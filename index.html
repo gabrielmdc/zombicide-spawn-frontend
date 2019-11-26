@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
 </head>
-<body style='background: url("images/background-3.jpg"); text-align: center; background-position: center; background-repeat: no-repeat; background-size: cover'>
+<body style='background: url("images/background.png"); text-align: center; background-position: center; background-repeat: no-repeat; background-size: cover'>
     <script type="text/javascript" src="necromancer-data.js" type="module"></script>
     <script type="text/javascript" src="activation-data.js" type="module"></script>
     <script type="text/javascript" src="double-spawn-data.js" type="module"></script>
@@ -25,7 +25,7 @@
     let card;
     function pickUpCard() {
         card = getRandomCard();
-        const imgPath = 'images/' + card.number + '.jpg';
+        const imgPath = 'images/' + card.number + '.png';
         document.getElementById('cardImg').src = imgPath;
         document.getElementById('button').style.visibility = 'hidden';
     }
