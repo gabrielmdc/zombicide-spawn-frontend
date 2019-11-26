@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Zombicide (Black plage) spawn pile
+
+It will allow you to get a random Zombicide spawn card from a pile of cards.
+
+![Example 1](/public/images/example1.png)
+![Example 2](/public/images/example2.png)
 
 ## Available Scripts
 
