@@ -1,6 +1,6 @@
 {
   "name": "zombicide-spawn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Frontend version of Zombicide Black Plague - backend, spawn cards",
   "author": "gabrielmdc",
   "homepage": "https://github.com/gabrielmdc/zombicide-spawn-frontend",
