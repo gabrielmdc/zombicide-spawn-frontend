@@ -1,12 +1,22 @@
 {
   "name": "zombicide-spawn",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "Frontend version of Zombicide Black Plague - backend, spawn cards",
+  "author": "gabrielmdc",
+  "homepage": "https://github.com/gabrielmdc/zombicide-spawn-frontend",
+  "bugs": {
+    "url": "https://github.com/gabrielmdc/zombicide-spawn-frontend/issues",
+    "email": "gmdcwork@gmail.com"
+  },
   "private": true,
   "dependencies": {
+    "@apollo/react-hooks": "^3.1.3",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
     "@types/react": "16.9.13",
     "@types/react-dom": "16.9.4",
+    "apollo-boost": "^0.4.7",
+    "graphql": "^14.5.8",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

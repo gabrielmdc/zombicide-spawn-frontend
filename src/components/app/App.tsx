@@ -1,51 +1,51 @@
 import React from 'react';
 import './App.scss';
-import { Card } from '../../models/card';
-import { pile } from '../../data/pile';
+import Card from '../card/Card';
 
 interface State {
-  card?: Card;
-  cardImgPath?: string;
-  
+  cardNumber?: number;
+  playPile: number[];
+  historyPile: number[];
 }
 
 export default class App extends React.Component<any, State> {
-  playPile: Card[];
-
   constructor(props: any) {
     super(props);
-    this.playPile = [];
-    this.state = {};
+    this.state = {
+      playPile: [],
+      historyPile: []
+    };
   }
 
-  getRandomIndex(pile: Card[]) {
+  getNewPile() {
+    const numOfCards = 54;
+    const keys = Array(numOfCards).keys();
+    const pile: number[] = [...Array.from(keys)].map(i => i + 1);
+    return pile;
+  }
+
+  getRandomIndex(pile: number[]) {
     return Math.floor(Math.random() * pile.length);
   }
 
-  getRandomCard() {
-    if (!this.playPile.length) {
-      this.playPile = [...pile];
-    }
-    const randomIndex = this.getRandomIndex(this.playPile);
-    const card = this.playPile.splice(randomIndex, 1)[0];
-    return card;
-  }
-  
   pickUpCard() {
-    const card = this.getRandomCard();
-    const cardImgPath = 'images/' + card.number + '.png';
+    const playPile = this.state.playPile.length ? [...this.state.playPile] : this.getNewPile();
+    const randomIndex = this.getRandomIndex(playPile);
+    const nextCardNumber = playPile.splice(randomIndex, 1)[0];
+    const historyPile = [...this.state.historyPile];
+    const actualCardNumber = this.state.cardNumber;
+    if (actualCardNumber) {
+      historyPile.unshift(actualCardNumber);
+    }
     this.setState({
-      card,
-      cardImgPath
+      cardNumber: nextCardNumber,
+      historyPile,
+      playPile
     });
   }
 
   render() {
-    const cardImage = this.state.card ?
-      <img className="card" alt="Card" onClick={e => this.pickUpCard()} src={this.state.cardImgPath} height="700"/> :
-      <img className="card" alt="Card" onClick={e => this.pickUpCard()} src='images/front.png' height="700"/>
-    
-    return (
-    cardImage
-  )};
+    const cardImage = <Card number={this.state.cardNumber} onClick={() => this.pickUpCard()}/>;
+    return cardImage;
+  }
 }

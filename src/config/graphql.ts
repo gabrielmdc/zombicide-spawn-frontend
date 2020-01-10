@@ -1,0 +1,1 @@
+export const URI: string = process.env.GRAPHQL_URI || 'https://zombicide-spawn-backend.herokuapp.com/graphql';
