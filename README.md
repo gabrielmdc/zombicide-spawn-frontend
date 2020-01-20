@@ -2,8 +2,8 @@
 
 It will allow you to get a random Zombicide spawn card from a pile of cards.
 
-![Example 1](/public/images/example1.png)
-![Example 2](/public/images/example2.png)
+![Example 1](/public/images/example-1.png)
+![Example 2](/public/images/example-2.png)
 
 ## Available Scripts
 
