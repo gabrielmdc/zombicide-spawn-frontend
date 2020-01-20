@@ -1,3 +1,45 @@
 .card {
   cursor: pointer;
+  display: grid;
+  width: 19em;
+  height: 29em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  grid-template-rows: 18% 10% repeat(4, min-content);
+  margin: 0 auto;
+  border-radius: 1.5em;
+
+  // Elements
+  &__title {
+    font-family: AlgoFY;
+    font-size: 1.4em;
+    margin: 0;
+    text-align: center;
+    padding-top: 1em;
+  }
+
+  &__number {
+    font-family: ArekLatinSemiBoldItalic;
+    font-size: 1.4em;
+    margin: 0;
+    text-align: center;
+  }
+
+  // Modifiers
+  &--szi {
+    background-image: url('../../assets/empty-card.png');
+  }
+
+  &--activation {
+    background-image: url('../../assets/empty-card.png');
+  }
+
+  &--necromancer {
+    background-image: url('../../assets/necromancer-card.png');
+  }
+
+  &--double-spawn {
+    background-image: url('../../assets/double-spawn-card.png');
+  }
 }

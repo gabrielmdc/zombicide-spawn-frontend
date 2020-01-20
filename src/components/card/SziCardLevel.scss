@@ -1,0 +1,68 @@
+.szi-card-level {
+  display: grid;
+  grid-template-areas:  "typename typename typeicon"
+                        "xcount typecount typeicon";
+  grid-template-rows: min-content 2.9em;
+  grid-template-columns: auto 2.5em 4em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  margin-bottom: 0.2em;
+
+  // Elements
+  &__type-name {
+    font-family: ArekLatinSemiBoldItalic;
+    font-size: 1.5em;
+    margin: 0;
+    grid-area: typename;
+    text-align: right;
+  }
+  
+  &__type-x {
+    font-family: AlgoFY;
+    font-size: 3em;
+    margin: 0;
+    grid-area: xcount;
+    text-align: right;
+    align-self: end;
+    margin-bottom: -0.1em;
+  }
+  
+  &__type-count {
+    font-family: AlgoFY;
+    font-size: 4em;
+    margin: 0;
+    grid-area: typecount;
+    align-self: end;
+    margin-bottom: -0.1em;
+    text-align: left;
+  }
+
+  &__type-icon {
+    grid-area: typeicon;
+    margin: 0;
+    align-self: end;
+    height: 100%;
+
+    // Modifiers
+    &--walker {
+      height: 4em;
+      padding-right: 2em;
+      // background-image: url('../../assets/walker.png');
+    }
+
+    &--runner {
+      height: 4em;
+      padding-right: 2em;
+    }
+
+    &--fatty {
+      height: 4em;
+      padding-right: 2em;
+    }
+
+    &--abomination {
+      height: 4em;
+      padding-right: 2em;
+    }
+  }
+}

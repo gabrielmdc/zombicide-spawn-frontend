@@ -1,0 +1,25 @@
+.activation-card-level {
+  display: grid;
+  grid-template-areas:  "typename typeicon";
+  grid-template-rows: 4.8em;
+  grid-template-columns: auto 5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+
+  // Elements
+  &__type-name {
+    font-family: ArekLatinSemiBoldItalic;
+    font-size: 1.5em;
+    margin: 0;
+    grid-area: typename;
+    text-align: right;
+    padding-top: 0.2em;
+  }
+
+  &__type-icon {
+    grid-area: typeicon;
+    margin: 0;
+    align-self: center;
+    width: 90%;
+  }
+}

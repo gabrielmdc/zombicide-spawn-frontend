@@ -1,0 +1,21 @@
+.loading {
+  display: table-cell;
+  height: 29em;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: center;
+  width: 100vw;
+
+  &__icon {
+    display: block;
+    margin: 0 auto;
+    width: 10vw;
+
+    animation: rotation 2s infinite linear;
+  }
+
+  @keyframes rotation {
+      from {transform: rotate(359deg);}
+      to   {transform: rotate(0deg);}
+  }
+}
