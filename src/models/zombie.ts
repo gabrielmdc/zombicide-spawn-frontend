@@ -1,6 +1,6 @@
 export enum Zombie {
-  Fatty = 'fatty',
-  Runner = 'runner',
-  Walker = 'walker',
-  Abomination = 'abomination'
+  Fatty = 'Fatty',
+  Runner = 'Runner',
+  Walker = 'Walker',
+  Abomination = 'Abomination'
 }
