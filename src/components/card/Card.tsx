@@ -14,17 +14,24 @@ import { CardType } from '../../models/card-type';
 import BackCard from './BackCard';
 import DoubleSpawnCard from './DoubleSpawnCard';
 import NecromancerCard from './NecromancerCard';
+import loadingIcon from '../../assets/zbp-icon.png';
+import './Loading.scss';
 
 export default function Card(props: CardProps) {
   const number = props.number;
   const skip = !number;
   const queryResult = useQuery(getCardQuery, { variables: { number }, skip });
+
   if (skip) {
     return <BackCard onClick={props.onClick} />
   }
   
   if (queryResult.loading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="loading">
+        <img className="loading__icon" src={loadingIcon} alt="Loading..." title="Loading" />
+      </div>
+    );
   }
   if (queryResult.error) {
     console.error(queryResult.error);
