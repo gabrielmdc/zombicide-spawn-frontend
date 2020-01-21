@@ -2,6 +2,8 @@
 
 It will allow you to get a random Zombicide spawn card from a pile of cards.
 
+The backend project is [here](https://github.com/gabrielmdc/zombicide-spawn-backend)
+
 ![Example 1](/public/images/example-1.png)
 ![Example 2](/public/images/example-2.png)
 
